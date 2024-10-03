@@ -1,0 +1,78 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.pagination-ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-item {
+    margin: 0px;
+}
+
+.page-link {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #009286;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+.page-link:hover {
+    background-color: #f0f0f0;
+    color: #009b9b;
+}
+
+.page-item.active .page-link {
+    color: #003c4b;
+    border-color: #858585;
+}
+
+.page-item.disabled .page-link {
+    pointer-events: none;
+    color: #ddd;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .page-link {
+        padding: 8px 12px; /* Уменьшаем отступы для компактного отображения */
+        font-size: 14px; /* Уменьшаем размер текста */
+    }
+
+    .page-item {
+        margin: 3px; /* Уменьшаем отступы между кнопками */
+    }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+    .page-link {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .page-item {
+        margin: 2px;
+    }
+
+    .pagination-ul {
+        flex-wrap: wrap; /* Избегаем переноса кнопок для супер-маленьких экранов */
+        overflow-x: auto; /* Добавляем горизонтальную прокрутку */
+   
+    }
+}

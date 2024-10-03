@@ -1,0 +1,136 @@
+.container-filter {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.container-for-poisk {
+    text-align: left;
+    margin-left: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.container-for-poisk a {
+    text-decoration: none;
+    color: #333;
+    margin-top: 10px;
+}
+
+.header-filter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.text-filter {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters select,
+.filters input[type="text"],
+.filters input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 3px;    
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    margin-top: -8px;
+    
+}
+.filters select:hover,
+.filters input[type="text"]:hover,
+.filters input[type="number"]:hover {
+    background-color: #6f7a9e75;
+}
+
+.filters input[type="text"]::placeholder,
+.filters input[type="number"]::placeholder {
+    color: #999;
+}
+
+.filters select:focus,
+.filters input:focus {
+    outline: none;
+    border-color: #2c2c2c;
+    box-shadow: 0 0 5px rgba(70, 70, 70, 0.5);
+}
+
+a {
+    color: #fafafa;
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Адаптация для экранов с шириной до 768px */
+@media (max-width: 768px) {
+    .filters {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .container-for-poisk {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container-for-poisk a {
+        margin-left: 0;
+    }
+    
+    .header-filter {
+        flex-direction: column;
+    }
+
+    .text-filter {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    a {
+        font-size: 16px;
+    }
+}
+
+/* Адаптация для очень маленьких экранов (до 480px) */
+@media (max-width: 480px) {
+    .filters select,
+    .filters input[type="text"],
+    .filters input[type="number"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .filters {
+        gap: 8px;
+    }
+
+    .text-filter {
+        font-size: 18px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+}

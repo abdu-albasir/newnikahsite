@@ -1,0 +1,145 @@
+.container-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    max-width: 1000px; /* Более гибкая ширина контейнера */
+    margin: 50px auto;
+    padding: 0 20px; /* Небольшие отступы по бокам для мобильных устройств */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1); /* Немного уменьшил тень */
+    padding: 20px;
+    text-align: center;
+    width: 31%; /* Процентное значение для автоматической адаптации */
+    height: 40vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный эффект при наведении */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Лёгкое поднятие карточки при наведении */
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.2); /* Усиливаем тень при наведении */
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    margin-top: -10px;
+}
+
+.h2-card {
+    margin-bottom: -10px;
+    margin-top: 10px;
+}
+
+.last-name {
+    margin-top: -20px;
+}
+
+.btn-card-more {
+    margin-top: 0px;
+    border: 1px solid #555;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Добавлен плавный переход для кнопки */
+}
+
+.btn-card-more:hover {
+    color: #fff;
+    background-color: #404552;
+}
+
+img {
+    height: 150px;
+    margin: auto;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd; /* Добавлена граница для большей аккуратности */
+}
+
+/* Адаптация для экранов с шириной до 768px */
+@media (max-width: 768px) {
+    .card {
+        width: 45%; /* Увеличиваем ширину карточек на планшетах */
+        height: auto; /* Автоматическая высота для удобства */
+    }
+}
+
+/* Адаптация для экранов с шириной до 480px */
+@media (max-width: 480px) {
+    .card {
+        width: 45%; /* Карточки занимают 48% ширины для показа двух карточек в строке */
+        margin-bottom: 20px;
+    }
+    
+
+    img {
+        height: 120px;
+        width: 120px;
+        
+    }
+
+    .btn-card-more {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+/* Стили для модального окна */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 80%;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Адаптация модального окна для мобильных устройств */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%; /* Увеличиваем ширину на мобильных */
+    }
+
+    .close {
+        font-size: 20px; /* Уменьшаем размер кнопки закрытия на мобильных */
+    }
+}
