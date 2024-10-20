@@ -11,7 +11,7 @@ const Home = () => {
     };
 
     return (
-        <div>
+        <div className='div'>
             <button onClick={handleFillForm} className="btn">
                 Заполнить анкету
             </button>

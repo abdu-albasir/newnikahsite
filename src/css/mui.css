@@ -5,7 +5,20 @@
   overflow: hidden !important;
   border-radius: 14px !important;
 }
+header img {
+  width: 90px;
+  height: 90px;
+  
+}
+header {
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+div button h1 {
+  text-align: left;
+  text-decoration: underline;
 
+}
 .MuiSlider-track {
   background: #d34085 !important;
   border: none !important;

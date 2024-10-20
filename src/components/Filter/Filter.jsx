@@ -26,7 +26,7 @@ const Filter = ({ onFilterChange }) => {
     useEffect(() => {
         const fetchFilterData = async () => {
             try {
-                const response = await axios.get('http://82.146.52.124:8000/api/diynamicdata/');
+                const response = await axios.get('https://nikah.space/api/diynamicdata/');
                 const data = response.data;
     
                 // Извлекаем уникальные страны и национальности
@@ -53,7 +53,7 @@ const Filter = ({ onFilterChange }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://82.146.52.124:8000/api/showapplication/');
+                const response = await axios.get('https://nikah.space/api/showapplication/');
                 setApplications(response.data);
                 onFilterChange(response.data); // Передаем данные в родительский компонент
             } catch (error) {
