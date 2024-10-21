@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import './Card.css'; // Ваши стили
 
 const Card = ({ applications }) => {
@@ -17,20 +16,23 @@ const Card = ({ applications }) => {
 
     return (
         <div className='container-card'>
-            {applications.map((application) => (
-                <div key={application.id} className="card">
-                    <img src={application.photo} alt="img" />
-                    <h2 className='h2-card'>{application.first_name}</h2>
-                    <h2 className='h2-card last-name'>{application.last_name}</h2>
+            {applications.map((application) => {
+                console.log('URL изображения:', application.photo); // Вывод в консоль URL изображения
 
-                    <p className='age-card'>№ {application.id}</p>
-                    <p className='age-card'>{application.age} лет</p>
-                    <p className='age-card'>{application.country}</p>
-                    <button className="btn-card-more" onClick={() => handleMoreInfoClick(application)}>
-                        Подробнее
-                    </button>
-                </div>
-            ))}
+                return (
+                    <div key={application.id} className="card">
+                        <img src={application.photo} alt="img" />
+                        <h2 className='h2-card last-name'>{application.last_name}</h2>
+
+                        <p className='age-card'>№ {application.id}</p>
+                        <p className='age-card'>{application.age} лет</p>
+                        <p className='age-card'>{application.country}</p>
+                        <button className="btn-card-more" onClick={() => handleMoreInfoClick(application)}>
+                            Подробнее
+                        </button>
+                    </div>
+                );
+            })}
 
             {/* Модальное окно */}
             {selectedApplication && (
