@@ -6,7 +6,7 @@ import Pagination from '../Pagination/Pagination'; // Импортируем к�
 const CardList = () => {
     const [filteredApplications, setFilteredApplications] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const applicationsPerPage = 9; // Количество карточек на одну страницу
+    const applicationsPerPage = 12; // Количество карточек на одну страницу
 
     // Определяем индекс последней и первой карточки на странице
     const indexOfLastApplication = currentPage * applicationsPerPage;

@@ -7,30 +7,70 @@
 }
 
 .container-for-poisk {
-    text-align: left;
-    margin-left: 20px;
-    display: flex;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    text-align: center;
+    
 }
 
-.container-for-poisk a {
-    text-decoration: none;
-    color: #333;
-    margin-top: 10px;
+.container-for-poisk h2 {
+    font-family: Mulish;
+    font-size: 87.25px;
+    font-weight: 400;
+    line-height: 109.5px;
+    text-align: center;
+    margin-bottom: -30px;
+    background: linear-gradient(99.36deg, #6A59A7 32.12%, #EDABC6 73.62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* для Safari */
+    background-clip: text;
+    text-fill-color: transparent; /* для других браузеров */
+    
+    
 }
 
 .header-filter {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin-bottom: 20px;
+    height: 30vh;
+    border-radius: 50px;
 }
 
 .text-filter {
     font-size: 24px;
     font-weight: bold;
     color: #333;
+}
+.conteiner-top-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 60%;
+    margin: 0px auto;
+}
+.container-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.conteiner-top-top img {
+    width: 80px;
+}
+.top-h1 {
+    font-family: PF Monumenta Pro;
+    font-size: 45.69px;
+    font-weight: 400;
+    line-height: 52.54px;
+    
+    background: linear-gradient(99.36deg, #6A59A7 32.12%, #EDABC6 73.62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* для Safari */
+    background-clip: text;
+    text-fill-color: transparent; /* для других браузеров */
+    
+    
 }
 
 .filters {
@@ -46,41 +86,33 @@
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border-radius: 3px;    
-    color: #212529;
+    border-radius: 10px;
+
+    color: #634F9E;
     background-color: #f8f9fa;
-    border-color: #f8f9fa;
+    border: 2.92px solid #634F9E;
     margin-top: -8px;
     
 }
 .filters select:hover,
 .filters input[type="text"]:hover,
 .filters input[type="number"]:hover {
-    background-color: #6f7a9e75;
+    border: 2.92px solid #493780;
 }
 
 .filters input[type="text"]::placeholder,
 .filters input[type="number"]::placeholder {
-    color: #999;
+    color: #704279;
 }
 
 .filters select:focus,
 .filters input:focus {
     outline: none;
-    border-color: #2c2c2c;
-    box-shadow: 0 0 5px rgba(70, 70, 70, 0.5);
+    border: 2.92px solid #654fa7;
+    box-shadow: 0 0 8px rgba(70, 70, 70, 0.5);
 }
 
-a {
-    color: #fafafa;
-    text-decoration: none;
-    font-size: 18px;
-    margin-left: 20px;
-}
 
-a:hover {
-    text-decoration: underline;
-}
 
 
 /* Адаптация для экранов с шириной до 768px */

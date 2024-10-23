@@ -21,12 +21,13 @@ const Card = ({ applications }) => {
 
                 return (
                     <div key={application.id} className="card">
-                        <img src={application.photo} alt="img" />
-                        <h2 className='h2-card last-name'>{application.last_name}</h2>
+                        <h2 className='h2-card last-name'>{application.first_name}, {application.age} лет</h2>
 
-                        <p className='age-card'>№ {application.id}</p>
-                        <p className='age-card'>{application.age} лет</p>
-                        <p className='age-card'>{application.country}</p>
+
+                        <h2 className='h2-card'>{application.country}, {application.city}</h2>
+                        <h2 className='h2-card'>№ {application.id}</h2>
+                        <img src={application.photo} alt="img" />
+
                         <button className="btn-card-more" onClick={() => handleMoreInfoClick(application)}>
                             Подробнее
                         </button>
@@ -40,7 +41,7 @@ const Card = ({ applications }) => {
                     <div className="modal-content">
                         <span className="close" onClick={handleCloseModal}>&times;</span>
                         <h2>{selectedApplication.first_name} {selectedApplication.last_name}</h2>
-                        <img src={selectedApplication.photo} alt="Фото анкеты" />
+                        <img className='img' src={selectedApplication.photo} alt="Фото анкеты" />
 
                         <h2>Анкета № {selectedApplication.id}</h2>
                         <p><strong>Читаете ли вы намаз? :</strong> {selectedApplication.read_namaz}</p>

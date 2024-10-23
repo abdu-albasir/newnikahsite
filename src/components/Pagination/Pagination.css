@@ -21,7 +21,7 @@
 .page-link {
     text-decoration: none;
     padding: 10px 15px;
-    color: #009286;
+    color: #FF9BAD;
     border: 1px solid #ddd;
     background-color: white;
     cursor: pointer;
@@ -32,12 +32,12 @@
 
 .page-link:hover {
     background-color: #f0f0f0;
-    color: #009b9b;
+    color: #fc8fa3;
 }
 
 .page-item.active .page-link {
-    color: #003c4b;
-    border-color: #858585;
+    color: #ff7d95;
+    border-color: #d87f7f;
 }
 
 .page-item.disabled .page-link {
